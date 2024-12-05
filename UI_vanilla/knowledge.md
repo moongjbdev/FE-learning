@@ -22,3 +22,9 @@
       - _content-box_: độ rộng bằng box-content + padding + border
       - _boder-box_ : độ rộng bao gồm padding và border
 
+- _text-decoration_ : gạch dưới thẻ a
+- _border-radius_ : đọ bo góc
+- _flex_ : 
+- _align-items_ : mặc định là `stretch` làm cho các cột cao bằng nhau, có `flex end`     `flex-start` `center` `baseline`
+- _flex-wrap_ : mặc định là `no-wrap` không cho rớt xuống hàng khi quá width
+- _pug_
