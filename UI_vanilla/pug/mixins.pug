@@ -1,0 +1,16 @@
+mixin tourItem (image, price, title, review, reviewCount, duration, tourPrice)
+        .tour
+          .tour-top
+            img.tour-image(src=image, alt='img')
+            span.tour-price= price
+          .tour-content
+            h3.tour-title= title
+            .tour-rating
+              .tour-review
+                .tour-star
+                  img(src='./images/star.png', alt='vote star')
+                .tour-review-count
+                  span= review
+                    |  (#{reviewCount} reviews)
+              span.div Duration: #{duration}
+            a.tour-button(href='https://google.com', target='_blank', rel='noopener noreferrer') Tours Price $#{tourPrice}
