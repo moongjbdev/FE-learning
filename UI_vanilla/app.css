@@ -96,12 +96,15 @@ body {
   line-height: 17px;
   /* display: none; */
 }
-
+.tour-top {
+  position: relative;
+}
 .tour-image {
   border-radius: 10px 10px 0 0;
   width: 100%;
   object-fit: cover;
   height: 239px;
+  display: block;
 }
 
 
@@ -109,4 +112,19 @@ body {
   max-width: 1170px;
   margin: 0 auto;
   width: 100%;
+}
+
+.tour-price {
+  position: absolute;
+  display: inline-block;
+  top: 24px;
+  left: 30px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #FCFCFD;
+  background-color: rgb(53, 57, 69, 0.8);
+  padding: 5px 16px;
+  line-height: 20px;
+  border-radius: 4px;
+
 }

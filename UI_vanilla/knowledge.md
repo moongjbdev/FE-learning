@@ -28,3 +28,5 @@
 - _align-items_ : mặc định là `stretch` làm cho các cột cao bằng nhau, có `flex end`     `flex-start` `center` `baseline`
 - _flex-wrap_ : mặc định là `no-wrap` không cho rớt xuống hàng khi quá width
 - _pug_
+- _position_ : có 5 giá trị chính: static, relative, absolute, sticky, fixed
+      relative: khi sử dụng gtri này phải lưu ý con của nó có dùng absolute không?, khi sử dụng đi kèm có top right button left
