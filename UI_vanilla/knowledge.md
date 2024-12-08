@@ -30,3 +30,7 @@
 - _pug_
 - _position_ : có 5 giá trị chính: static, relative, absolute, sticky, fixed
       relative: khi sử dụng gtri này phải lưu ý con của nó có dùng absolute không?, khi sử dụng đi kèm có top right button left
+
+_breakpoint_ : 320 480 768 1024 1200 1366 1440 1600 1920
+
+_transform_ : translate, skew, rotate, scale
