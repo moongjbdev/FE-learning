@@ -9,6 +9,20 @@ img {
   max-width: 100%;
 }
 
+.gem {
+  margin-bottom: 70px;
+}
+.heading {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 45px;
+  color: #353945;
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+
 .gem-list {
   display: grid;
   grid-template-rows: 300px 300px 150px;
