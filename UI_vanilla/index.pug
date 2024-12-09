@@ -9,12 +9,18 @@ html(lang="en")
     link(rel="stylesheet" href="./styles/popular.css")
     link(rel="stylesheet" href="./styles/gem.css")
     link(rel="stylesheet" href="./styles/footer.css")
+    link(rel="stylesheet" href="./styles/header.css")
+
 
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
     link(href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet")
   body
-    header
+    header.header
+      .container
+        .header-list 
+          each link in ["Things to do", "Travel Guide", "Tours"]
+            a.header-item(href="#")=link
     main
       section.top-tours
         .container
