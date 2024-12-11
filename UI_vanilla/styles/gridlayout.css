@@ -151,3 +151,18 @@ ul, li {
 .dropdown-item:hover {
   background-color: #f4f5f9;
 }
+
+
+
+.table {
+  margin-top: 50px;
+}
+
+table {
+  width: 100%;
+}
+
+table th, table td {
+  text-align: left;
+  vertical-align: middle;
+}
