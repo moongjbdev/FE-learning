@@ -10,10 +10,12 @@ import Search from '../assets/Header/Search.png';
 import Cart from '../assets/Header/handbag.svg';
 import User from '../assets/Header/User.svg';
 
-import LanguageModal from './Modal/LanguagesModal'
+// import LanguageModal from './Modal/LanguagesModal'
+import Navigation from './Navigation';
 
 const Header = () => {
   return (
+    <div>
     <div className="bg-[#1B6392] h-[140px]">
       {/* Top Header */}
       <div className="h-[52px] border-b border-[#2484C2]">
@@ -57,7 +59,7 @@ const Header = () => {
                   <span className='mr-[6px] text-[#FFFFFF] text-sm'>Eng</span>
                   <img src={ArrowDown} alt="arrow-down" className='w-3 h-3'/>
                   <div className='absolute top-0 right-0 -translate-x-2 translate-y-9'>
-                    <LanguageModal/>
+                    {/* <LanguageModal/> */}
                   </div>
                 </div>
                 {/* Currency */}
@@ -101,7 +103,9 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div> 
+    </div>
+    <Navigation/>
+    </div>
   )
 }
 

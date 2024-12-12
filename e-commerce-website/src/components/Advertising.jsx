@@ -4,7 +4,7 @@ import exitIcon from '../assets/Advertising/X.png'
 const Advertising = () => {
   return (
     <div className="w-full h-20 bg-[#191C1F] font-publicsans relative">
-      <div className="w-main h-full m-auto flex justify-between items-center">
+      <div className="max-w-main h-full m-auto flex justify-between items-center">
         <div className="h-full flex items-center justify-center">
           <div className="w-[74px] h-10 bg-[#F3DE6D] py-[6.52px] px-[10.3px] -rotate-3 mr-3">
             <span className=" text-[#191C1F] font-semibold text-xl">Black</span>

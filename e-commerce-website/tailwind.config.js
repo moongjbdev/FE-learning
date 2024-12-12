@@ -11,11 +11,13 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
         publicsans: ['"Public Sans"', 'sans-serif'],
       },
-      width: {
+      maxWidth: {
         'main': '1320px',
       }
     },
   },
-  plugins: [],
+  plugins: [
+    import('@tailwindcss/line-clamp'),
+  ],
 }
 
