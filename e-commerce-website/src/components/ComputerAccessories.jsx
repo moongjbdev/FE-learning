@@ -1,51 +1,34 @@
-/* eslint-disable no-unused-vars */
-import Banner from "../assets/Products/Banner.png";
-import ArrowRight from "../assets/Products/ArrowRight.svg";
-import ArrowRightOrange from "../assets/Products/ArrowRightOrange.svg";
+import Image1 from "../assets/ComputerAccessories/1.png"
+import Image2 from "../assets/ComputerAccessories/2.png"
+import Image3 from "../assets/ComputerAccessories/3.png"
+import Image4 from "../assets/ComputerAccessories/4.png"
+import Image5 from "../assets/ComputerAccessories/5.png"
+import Image6 from "../assets/ComputerAccessories/6.png"
+import Image7 from "../assets/ComputerAccessories/7.png"
+import Image8 from "../assets/ComputerAccessories/8.png"
+import ArrowRightOrange from "../assets/ComputerAccessories/ArrowRightOrange.svg"
+import Heart from "../assets/ComputerAccessories/Heart.svg"
+import ShoppingCartSimple from "../assets/ComputerAccessories/ShoppingCartSimple.svg"
+import Eye from "../assets/ComputerAccessories/Eye.svg"
+import Star from "../assets/ComputerAccessories/Star.svg"
 
-import Image1 from "../assets/Products/i1.png";
-import Image2 from "../assets/Products/i2.png";
-import Image3 from "../assets/Products/i3.png";
-import Image4 from "../assets/Products/i4.png";
-import Image5 from "../assets/Products/i5.png";
-import Image6 from "../assets/Products/i6.png";
-import Image7 from "../assets/Products/i7.png";
-import Image8 from "../assets/Products/i8.png";
+import Hot from "./Tag/Hot"
+import Banner1 from "../assets/ComputerAccessories/Banner1.png"
+import Banner2 from "../assets/ComputerAccessories/Banner2.png"
+import ShopNow from "./Button/ShopNowBigBtn"
 
-import Star from "../assets/Products/Star.svg";
 
-import Heart from "../assets/Products/Heart.svg";
-import ShoppingCartSimple from "../assets/Products/ShoppingCartSimple.svg";
-import Eye from "../assets/Products/Eye.svg";
-
-import Hot from "./Tag/Hot";
-import BestDeals from "./Tag/BestDeals";
-import Sale from "./Tag/Sale";
-import PerOff from "./Tag/PerOff";
-import ShopNow from "./Button/ShopNowBigBtn";
-
-const Products = () => {
+const ComputerAccessories = () => {
   return (
     <div className="max-w-main m-auto mt-[72px] min-h-[716px] flex">
-      {/* Banner */}
-      <div className="mr-6">
-        <div className="relative w-full h-full">
-          {/* Banner image */}
-          <img srcSet={`${Banner} 2x`} alt="Banner" className="w-full h-full block object-cover"/>
-          {/* Shop Now button */}
-          <div className="absolute top-[216px] left-[41px]">
-            <ShopNow/>
-          </div>
-        </div>
 
-      </div>
       {/* Electronics */}
       <div className="flex-1">
         {/* Heading */}
         <div className="flex items-center justify-between">
           {/* Title */}
           <div>
-            <span className="text-2xl text-[#191C1F] font-semibold">Featured Products</span>
+            <span className="text-2xl text-[#191C1F] font-semibold">Computer Accessories</span>
           </div>
           {/* Fillter product */}
           <div className="flex">
@@ -54,11 +37,7 @@ const Products = () => {
             </div>
 
             <div className="p-2 w-fit">
-              <span className="text-sm text-[#5F6C72] font-normal">Smart Phone</span>
-            </div>
-
-            <div className="p-2 w-fit">
-              <span className="text-sm text-[#5F6C72] font-normal">Laptop</span>
+              <span className="text-sm text-[#5F6C72] font-normal">Keyboard & Mouse</span>
             </div>
 
             <div className="p-2 w-fit">
@@ -66,7 +45,11 @@ const Products = () => {
             </div>
 
             <div className="p-2 w-fit">
-              <span className="text-sm text-[#5F6C72] font-normal">TV</span>
+              <span className="text-sm text-[#5F6C72] font-normal">Webcam</span>
+            </div>
+
+            <div className="p-2 w-fit">
+              <span className="text-sm text-[#5F6C72] font-normal">Printer</span>
             </div>
 
             {/* Browse all products */}
@@ -112,10 +95,10 @@ const Products = () => {
               </div>
               {/* Title */}
               <div className="line-clamp-2 overflow-hidden">
-                <span className="block text-[14px] font-normal text-[#191C1F]">TOZO T6 True Wireless Earbuds Bluetooth Headphone Headphone Headphone</span>
+                <span className="block text-[14px] font-normal text-[#191C1F]">DELL 21.5 inch Full HD Monitor (E2216HV)</span>
               </div>
               {/* Price */}
-              <span className="text-[14px] font-semibold text-[#2DA5F3]">$70</span>
+              <span className="text-[14px] font-semibold text-[#2DA5F3]">$360</span>
             </div>
             {/* Sale, Hot, Best Deals */}
             <div className="absolute top-3 left-3">
@@ -140,7 +123,7 @@ const Products = () => {
               </div>
               {/* Title */}
               <div className="line-clamp-2 overflow-hidden">
-                <span className="block text-[14px] font-normal text-[#191C1F]">Samsung Electronics Samsung Galexy S21 5G</span>
+                <span className="block text-[14px] font-normal text-[#191C1F]">Portable Wshing Machine, 11lbs capacity Model 18NMF</span>
               </div>
               {/* Price */}
               <span className="text-[14px] font-semibold text-[#2DA5F3]">$2,300</span>
@@ -161,7 +144,7 @@ const Products = () => {
               </div>
               {/* Title */}
               <div className="line-clamp-2 overflow-hidden">
-                <span className="block text-[14px] font-normal text-[#191C1F]">DELL 21.5 inch Full HD Monitor (E2216HV)</span>
+                <span className="block text-[14px] font-normal text-[#191C1F]">TOZO T6 True Wireless Earbuds Bluetooth Headphon</span>
               </div>
               {/* Price */}
               <span className="text-[14px] font-semibold text-[#2DA5F3]">$360</span>
@@ -182,7 +165,7 @@ const Products = () => {
               </div>
               {/* Title */}
               <div className="line-clamp-2 overflow-hidden">
-                <span className="block text-[14px] font-normal text-[#191C1F]">DELL 21.5 inch Full HD Monitor (E2216HV)</span>
+                <span className="block text-[14px] font-normal text-[#191C1F]">Dell Optiplex 7000x7480 All-in-One Computer Monitor</span>
               </div>
               {/* Price */}
               <span className="text-[14px] font-semibold text-[#2DA5F3]">$80</span>
@@ -203,7 +186,7 @@ const Products = () => {
               </div>
               {/* Title */}
               <div className="line-clamp-2 overflow-hidden">
-                <span className="block text-[14px] font-normal text-[#191C1F]">Wired Over-Ear Gaming Headphones with USB</span>
+                <span className="block text-[14px] font-normal text-[#191C1F]">Samsung Electronics Samsung Galexy S21 5G</span>
               </div>
               {/* Price */}
               <span className="text-[14px] font-semibold text-[#2DA5F3]">$1,500</span>
@@ -224,7 +207,7 @@ const Products = () => {
               </div>
               {/* Title */}
               <div className="line-clamp-2 overflow-hidden">
-                <span className="block text-[14px] font-normal text-[#191C1F]">DELL 21.5 inch Full HD Monitor (E2216HV)</span>
+                <span className="block text-[14px] font-normal text-[#191C1F]">4K UHD LED Smart TV with Chromecast Built-in</span>
               </div>
               {/* Price */}
               <span className="text-[14px] font-semibold text-[#2DA5F3]">$70</span>
@@ -245,7 +228,7 @@ const Products = () => {
               </div>
               {/* Title */}
               <div className="line-clamp-2 overflow-hidden">
-                <span className="block text-[14px] font-normal text-[#191C1F]">DELL 21.5 inch Full HD Monitor (E2216HV)</span>
+                <span className="block text-[14px] font-normal text-[#191C1F]">Wired Over-Ear Gaming Headphones with USB</span>
               </div>
               {/* Price */}
               <span className="text-[14px] font-semibold text-[#2DA5F3]">$250</span>
@@ -266,7 +249,7 @@ const Products = () => {
               </div>
               {/* Title */}
               <div className="line-clamp-2 overflow-hidden">
-                <span className="block text-[14px] font-normal text-[#191C1F]">4K UHD LED Smart TV with Chromecast Built-in</span>
+                <span className="block text-[14px] font-normal text-[#191C1F]">Polaroid 57-Inch Photo/Video Tripod with Deluxe Tripod Ca...</span>
               </div>
               {/* Price */}
               <span className="text-[14px] font-semibold text-[#2DA5F3]">$220</span>
@@ -275,9 +258,23 @@ const Products = () => {
 
         </div>
       </div>
+      {/* Banner */}
+      <div className="ml-6 w-[312px] flex flex-col gap-6">
+        <div className="relative w-full h-[428px] rounded overflow-hidden">
+          <img src={Banner1} alt="banner" className="w-full h-full object-cover block" />
+          <div className="absolute bottom-20 right-1/2 translate-x-1/2">
+            <ShopNow />
+          </div>
+        </div>
+        <div className="relative flex-1 rounded overflow-hidden">
+          <img src={Banner2} alt="banner" className="w-full h-full object-cover block" />
+          <div className="absolute bottom-8 right-1/2 translate-x-1/2">
+            <ShopNow />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
 
-export default Products
-
+export default ComputerAccessories

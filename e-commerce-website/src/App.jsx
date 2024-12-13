@@ -1,7 +1,7 @@
 import HomePage from "./pages/HomePage"
 const App = () => {
   return (
-    <div className=" m-auto font-publicsans mb-96">
+    <div className=" m-auto font-publicsans">
       <HomePage/>
     </div>
   )
