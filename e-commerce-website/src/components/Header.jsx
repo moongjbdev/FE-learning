@@ -10,10 +10,15 @@ import Search from '../assets/Header/Search.png';
 import Cart from '../assets/Header/handbag.svg';
 import User from '../assets/Header/User.svg';
 
-// import LanguageModal from './Modal/LanguagesModal'
+import LanguageModal from './Modal/LanguagesModal'
+import Currency from './Modal/CurrencyModal';
 import Navigation from './Navigation';
 
+import { useState } from 'react';
 const Header = () => {
+  const [isOpenModalLanguage, setOpenModalLanguage] = useState(false);
+  const [isOpenModalCurency, setOpenModalCurrency] = useState(false);
+
   return (
     <div>
     <div className="bg-[#1B6392] h-[140px]">
@@ -55,17 +60,19 @@ const Header = () => {
             <div className='py-1 pl-6'>
               <div className='flex items-center justify-center gap-6'>
                 {/* Languages */}
-                <div className='h-full flex items-center cursor-pointer relative'>
+                <div className='h-full flex items-center cursor-pointer relative'
+                  onClick={() => setOpenModalLanguage(!isOpenModalLanguage)}
+                  data-language-trigger
+                  >
                   <span className='mr-[6px] text-[#FFFFFF] text-sm'>Eng</span>
                   <img src={ArrowDown} alt="arrow-down" className='w-3 h-3'/>
-                  <div className='absolute top-0 right-0 -translate-x-2 translate-y-9'>
-                    {/* <LanguageModal/> */}
-                  </div>
+                  <LanguageModal isOpen={isOpenModalLanguage} onClose={() => setOpenModalLanguage(false)}/>
                 </div>
                 {/* Currency */}
-                <div className='h-full flex items-center cursor-pointer'>
+                <div className='h-full flex items-center cursor-pointer relative' onClick={() => setOpenModalCurrency(!isOpenModalCurency)} data-currency-trigger>
                   <span className='mr-[6px] text-[#FFFFFF] text-sm'>USD</span>
                   <img src={ArrowDown} alt="arrow-down" className='w-3 h-3'/>
+                  <Currency isOpen={isOpenModalCurency} onClose={() => setOpenModalCurrency(false)}/>
                 </div>
               </div>
             </div>

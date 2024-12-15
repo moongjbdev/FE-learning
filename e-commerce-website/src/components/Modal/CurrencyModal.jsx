@@ -1,21 +1,17 @@
 /* eslint-disable react/prop-types */
 import { useState, useRef, useEffect } from 'react';
 
-import VN from "../../assets/Languages/VN.svg"; 
-import USA from "../../assets/Languages/USA.svg"; 
 
-const LanguageModal = ({ isOpen, onClose }) => {
+const Currency = ({ isOpen, onClose }) => {
   const modalRef = useRef(null);
   const languages = [
     {
-      code: 'en',
-      name: 'English',
-      icon: <img src={USA} alt="USA flag" className="w-5 h-5 rounded-full" />
+      code: 'usd',
+      currency: 'Dollar (USD)',
     },
     {
-      code: 'vn',
-      name: 'Tiếng Việt', 
-      icon: <img src={VN} alt="Viet Nam flag" className="w-5 h-5 rounded-full" />
+      code: 'vnd',
+      currency: 'Đồng (VND)', 
     },
   ];
 
@@ -24,7 +20,7 @@ const LanguageModal = ({ isOpen, onClose }) => {
       // Kiểm tra xem click có phải là trên modal hay không
       if (modalRef.current && !modalRef.current.contains(event.target)) {
         // Kiểm tra thêm xem click có phải là trên trigger button không
-        const triggerElement = event.target.closest('[data-language-trigger]');
+        const triggerElement = event.target.closest('[data-currency-trigger]');
         if (!triggerElement) {
           onClose();
         }
@@ -43,30 +39,27 @@ const LanguageModal = ({ isOpen, onClose }) => {
     };
   }, [isOpen, onClose]);
 
-  const [selectedLang, setSelectedLang] = useState('en');
+  const [selectedCurrency, setSelectedCurrency] = useState('usd');
 
   const handleSelectLanguage = (code) => {
-    setSelectedLang(code);
+    setSelectedCurrency(code);
     onClose();
   };
 
   if (!isOpen) return null;
 
   return (
-    <div ref={modalRef} className="absolute top-0 right-0 -translate-x-2 translate-y-9 z-10 w-[180px] bg-white py-2 rounded-[3px]">
-      {languages.map((lang) => (
+    <div ref={modalRef} className="absolute top-0 left-0 -translate-x-2 translate-y-9 z-10 w-[180px] bg-white py-2 rounded-[3px]">
+      {languages.map((curency) => (
         <button
-          key={lang.code}
-          onClick={() => handleSelectLanguage(lang.code)}
-          className="flex items-center gap-3 w-full px-4 py-[6px] transition-colors"
+          key={curency.code}
+          onClick={() => handleSelectLanguage(curency.code)}
+          className="flex items-center w-full px-4 py-2 transition-colors"
         >
-          <div className="flex-shrink-0 w-5 h-5">
-            {lang.icon}
-          </div>
-          <span className={`text-sm ${selectedLang === lang.code ? 'text-[#191C1F]' : 'text-[#5F6C72]'}`}>
-            {lang.name}
+          <span className={`text-sm font-medium ${selectedCurrency === curency.code ? 'text-[#FA8232]' : 'text-[#5F6C72]'}`}>
+            {curency.currency}
           </span>
-          {selectedLang === lang.code && (
+          {selectedCurrency === curency.code && (
             <span className="ml-auto text-[#FA8232]">✓</span>
           )}
         </button>
@@ -75,4 +68,4 @@ const LanguageModal = ({ isOpen, onClose }) => {
   );
 };
 
-export default LanguageModal;
+export default Currency;
