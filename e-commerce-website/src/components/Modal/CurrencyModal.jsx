@@ -49,7 +49,7 @@ const Currency = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div ref={modalRef} className="absolute top-0 left-0 -translate-x-2 translate-y-9 z-10 w-[180px] bg-white py-2 rounded-[3px]">
+    <div ref={modalRef} className="absolute top-0 left-0 -translate-x-2 translate-y-9 z-10 w-[180px] bg-white py-2 rounded-[3px] border border-[#E4E7E9] shadow-xl">
       {languages.map((curency) => (
         <button
           key={curency.code}

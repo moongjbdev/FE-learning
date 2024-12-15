@@ -12,12 +12,17 @@ import User from '../assets/Header/User.svg';
 
 import LanguageModal from './Modal/LanguagesModal'
 import Currency from './Modal/CurrencyModal';
+import SignInModal from './Modal/SignInModal'
+
 import Navigation from './Navigation';
 
 import { useState } from 'react';
 const Header = () => {
   const [isOpenModalLanguage, setOpenModalLanguage] = useState(false);
   const [isOpenModalCurency, setOpenModalCurrency] = useState(false);
+  const [isOpenModalSignIn, setOpenModalSignIn] = useState(false);
+  // const [isOpenModalCart, setOpenModalCart] = useState(false);
+
 
   return (
     <div>
@@ -104,8 +109,9 @@ const Header = () => {
                 <span className='text-[#2484C2] text-xs font-semibold'>2</span>
               </div>
             </div>
-            <div className='cursor-pointer'>
-              <img src={User} alt="cart" className=''/>
+            <div className='cursor-pointer relative' data-signin-trigger onClick={() => setOpenModalSignIn(!isOpenModalSignIn)}>
+              <img src={User} alt="use-icon" className=''/>
+              <SignInModal isOpen={isOpenModalSignIn} onClose={() => setOpenModalSignIn(false)}/>
             </div>
           </div>
         </div>

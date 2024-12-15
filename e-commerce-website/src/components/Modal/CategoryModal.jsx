@@ -55,7 +55,7 @@ const CategoryModal = ({ isOpen, onClose }) => {
       <div ref={modalRef} className="absolute left-0 flex shadow-lg">
         {/* Main Categories */}
         <div className="relative">
-          <div className="w-64 bg-white py-3 border border-[#E4E7E9] rounded-sm">
+          <div className="w-64 bg-white py-3 border border-[#E4E7E9] rounded-sm shadow-xl">
             {Object.keys(categories).map((category) => (
               <div
                 key={category}
@@ -84,7 +84,7 @@ const CategoryModal = ({ isOpen, onClose }) => {
         </div>
         {/* Sub Categories */}
         {selectedCategory && (
-          <div className="absolute left-full translate-x-3 top-0 w-64 py-3 bg-white border border-[#E4E7E9] rounded-sm"
+          <div className="absolute left-full translate-x-3 top-0 w-64 py-3 bg-white border border-[#E4E7E9] rounded-sm shadow-xl"
             onMouseLeave={() => setSelectedCategory(null)}
           >
             {categories[selectedCategory].subCategories.map((subCategory) => (
