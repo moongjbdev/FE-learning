@@ -15,3 +15,28 @@
 body {
   @apply font-sans;
 }
+
+/* Trong file CSS chính của bạn */
+
+/* Custom scrollbar cho toàn bộ website */
+@layer utilities {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#5F6C72] rounded;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-[#FA8232];
+  }
+}

@@ -13,6 +13,8 @@ import User from '../assets/Header/User.svg';
 import LanguageModal from './Modal/LanguagesModal'
 import Currency from './Modal/CurrencyModal';
 import SignInModal from './Modal/SignInModal'
+import CartModal from './Modal/CartModal'
+
 
 import Navigation from './Navigation';
 
@@ -21,7 +23,7 @@ const Header = () => {
   const [isOpenModalLanguage, setOpenModalLanguage] = useState(false);
   const [isOpenModalCurency, setOpenModalCurrency] = useState(false);
   const [isOpenModalSignIn, setOpenModalSignIn] = useState(false);
-  // const [isOpenModalCart, setOpenModalCart] = useState(false);
+  const [isOpenModalCart, setOpenModalCart] = useState(false);
 
 
   return (
@@ -103,11 +105,12 @@ const Header = () => {
           </div>
           {/* Cart, User */}
           <div className='py-2 flex items-center gap-8'>
-            <div className='cursor-pointer relative'>
+            <div className='cursor-pointer relative' data-cart-trigger onClick={() => setOpenModalCart(!isOpenModalCart)} >
               <img src={Cart} alt="cart" className='w-8 h-8'/>
               <div className='absolute flex items-center justify-center w-5 h-5 bg-white text-center rounded-full top-0 right-0 translate-x-1 translate-y-0'>
                 <span className='text-[#2484C2] text-xs font-semibold'>2</span>
               </div>
+              <CartModal isOpen={isOpenModalCart} onClose={() => setOpenModalCart(false)}/>
             </div>
             <div className='cursor-pointer relative' data-signin-trigger onClick={() => setOpenModalSignIn(!isOpenModalSignIn)}>
               <img src={User} alt="use-icon" className=''/>
