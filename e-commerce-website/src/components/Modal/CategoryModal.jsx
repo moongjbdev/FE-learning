@@ -59,7 +59,8 @@ const CategoryModal = ({ isOpen, onClose }) => {
             {Object.keys(categories).map((category) => (
               <div
                 key={category}
-                className={`px-4 py-3 cursor-pointer hover:bg-gray-100 group flex justify-between items-center 
+                className={`px-4 py-3 cursor-pointer hover:bg-gray-100 group flex justify-between items-center
+                ${selectedCategory === category ? 'bg-gray-100' : ''}
                 ${selectedCategory === category ? 'after:content-[""]' : 'after:content-none'}
                 after:absolute after:right-0 after:top-0 after:h-full after:w-3
                 after:translate-x-full after:bg-transparent after:z-50
@@ -72,7 +73,9 @@ const CategoryModal = ({ isOpen, onClose }) => {
                   <img
                     src={CaretRight}
                     alt="arrow-right"
-                    className="w-4 h-4 hidden group-hover:block"
+                    className={`w-4 h-4 ${
+                      selectedCategory === category ? 'block' : 'hidden group-hover:block'
+                    }`}
                   />
                 )}
               </div>

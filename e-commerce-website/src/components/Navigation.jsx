@@ -38,7 +38,7 @@ const Navigation = () => {
             {/* Map */}
             <div className="h-full py-[14px] ml-6 flex items-center justify-start cursor-pointer">
               <img src={Map} alt="" className="w-6 h-6 mr-[6px]" />
-              <span className="text-[#5F6C72] text-[14px] font-normal ">Track Order</span>
+              <span className="text-[#5F6C72] text-[14px] font-normal">Track Order</span>
             </div>
             {/* Compare */}
             <div className="h-full py-[14px] ml-6 flex items-center justify-start cursor-pointer">
