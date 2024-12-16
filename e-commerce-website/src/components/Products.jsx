@@ -24,7 +24,16 @@ import Sale from "./Tag/Sale";
 import PerOff from "./Tag/PerOff";
 import ShopNow from "./Button/ShopNowBigBtn";
 
+import QuickViewModal from "./Modal/QuickViewModal";
+
+import { useEffect, useState } from "react";
 const Products = () => {
+
+  const [isQuickViewOpen, setIsQuickViewOpen] = useState(false)
+
+useEffect(() => {
+  console.log(isQuickViewOpen)
+},[isQuickViewOpen])
   return (
     <div className="max-w-main m-auto mt-[72px] min-h-[716px] flex">
       {/* Banner */}
@@ -97,8 +106,12 @@ const Products = () => {
                     <img src={ShoppingCartSimple} alt="ShoppingCartSimple" />
                   </div>
 
-                  <div className="w-12 h-12 p-2 bg-[#FA8232] flex items-center justify-center rounded-full cursor-pointer">
+                  <div className="w-12 h-12 p-2 bg-[#FA8232] flex items-center justify-center rounded-full cursor-pointer" onClick={() => setIsQuickViewOpen(true)}>
                     <img src={Eye} alt="Eye" />
+                    <QuickViewModal 
+                      isOpen={isQuickViewOpen}
+                      onClose={() =>setIsQuickViewOpen(false)}
+                    />
                   </div>
                 </div>
               </div>

@@ -4,7 +4,7 @@ import Image2 from "../../assets/CartModal/2.png"
 import ArrowRight from "../../assets/CartModal/ArrowRight.svg"
 
 
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 
 const CartModal = ({ isOpen, onClose }) => {
