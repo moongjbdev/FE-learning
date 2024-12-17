@@ -27,13 +27,7 @@ import Pinterest from "../../assets/QuickViewModal/Pinterest.svg";
 
 
 
-
-
-
-
-
-
-
+import CustomSelect from "../CustomSelect/CustomSelect";
 import { useState, useRef, useEffect } from 'react';
 
 const QuickViewModal = ({ isOpen, onClose }) => {
@@ -70,10 +64,10 @@ const QuickViewModal = ({ isOpen, onClose }) => {
       size: ["13 inch", "15 inch", "17 inch"],
       memory: ["8GB", "16GB", "32GB"],
       storage: ["256GB SSD", "512GB SSD", "1TB SSD"],
-      processor: ["Intel Core i5", "Intel Core i7", "AMD Ryzen 5"],
-      display: ["13.3-inch", "15.6-inch", "17.3-inch"],
-      camera: ["12 MP", "10 MP", "8 MP"],
-      battery: ["4500 mAh", "5000 mAh", "6000 mAh"],
+      // processor: ["Intel Core i5", "Intel Core i7", "AMD Ryzen 5"],
+      // display: ["13.3-inch", "15.6-inch", "17.3-inch"],
+      // camera: ["12 MP", "10 MP", "8 MP"],
+      // battery: ["4500 mAh", "5000 mAh", "6000 mAh"],
     }
 
   }
@@ -133,7 +127,7 @@ const QuickViewModal = ({ isOpen, onClose }) => {
             e.stopPropagation() // ngăn bubble lên phần tử cha
             onClose();
           }}
-          className="absolute right-0 translate-x-20 flex p-3 rounded-full w-12 h-12 text-gray-500 bg-[#233038] z-10 cursor-pointer"
+          className="absolute right-0 translate-x-20 flex p-3 rounded-full w-12 h-12 text-white bg-[#233038] z-10 cursor-pointer"
         >
           <img src={Close} />
         </div>
@@ -147,7 +141,7 @@ const QuickViewModal = ({ isOpen, onClose }) => {
                 className="w-full h-auto object-cover"
               />
             </div>
-            <div className="flex gap-2 overflow-x-auto scrollbar-thin scrollbar-thumb-[#FA8232] scrollbar-track-gray-100">
+            <div className="flex gap-2 overflow-x-auto">
               {[product.mainImage, ...product.images]?.map((img, index) => (
                 <img
                   key={index}
@@ -206,7 +200,7 @@ const QuickViewModal = ({ isOpen, onClose }) => {
             {/* fillter */}
             <div className="pb-6 border-b">
               {/* Render các bộ lọc động */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[160px] overflow-y-auto ">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[165px] overflow-y-auto">
                 {product.fillter && Object.keys(product.fillter).map((filterType) => (
                   <div key={filterType} className="items-center">
                     <label htmlFor={filterType} className="block text-[#191C1F] text-sm mb-2 capitalize">
@@ -231,17 +225,11 @@ const QuickViewModal = ({ isOpen, onClose }) => {
                         ))}
                       </div>
                     ) : (
-                      <select
-                        id={filterType}
+                      <CustomSelect
+                        options={product.fillter[filterType]}
                         value={selectedFilter[filterType]}
-                        onChange={(e) => handleFilterChange(filterType, e.target.value)}
-                        className="mt-1 p-2 border border-gray-300 rounded-md"
-                      >
-                        <option value="">Select {filterType}</option>
-                        {product.fillter[filterType].map((option, index) => (
-                          <option key={index} value={option}>{option}</option>
-                        ))}
-                      </select>
+                        onChange={(value) => handleFilterChange(filterType, value)}
+                      />
                     )}
                   </div>
                 ))}

@@ -20,9 +20,10 @@ body {
 
 /* Custom scrollbar cho toàn bộ website */
 @layer utilities {
-  /* width */
+  /* width for vertical scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
+    height: 8px; /* Add this line for horizontal scrollbar */
   }
 
   /* Track */

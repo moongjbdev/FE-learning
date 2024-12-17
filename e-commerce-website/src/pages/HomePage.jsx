@@ -11,12 +11,11 @@ import Products from "../components/Products"
 import TopProducts from "../components/TopProducts"
 import Widgets from "../components/Widgets"
 import Footer from "../components/Footer"
-import QuickViewModal from "../components/Modal/QuickViewModal"
 
 const HomePage = () => {
   return (
     <div className="">
-      {/* <Advertising/>
+      <Advertising/>
       <Header/>
       <Widgets/>
       <Features/>
@@ -28,8 +27,7 @@ const HomePage = () => {
       <TopProducts />
       <LatestNews />
       <Newsletters />
-      <Footer /> */}
-      <QuickViewModal isOpen={true} onClose={false}/>
+      <Footer />
     </div>
   )
 }
