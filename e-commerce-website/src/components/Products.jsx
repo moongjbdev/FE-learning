@@ -31,9 +31,6 @@ const Products = () => {
 
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false)
 
-useEffect(() => {
-  console.log(isQuickViewOpen)
-},[isQuickViewOpen])
   return (
     <div className="max-w-main m-auto mt-[72px] min-h-[716px] flex">
       {/* Banner */}

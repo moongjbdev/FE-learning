@@ -4,10 +4,10 @@ import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 import PriceFilterRadioCustom from "../CustomSelect/PriceFilterRadioCustom";
 
-const PriceRange = ({ min = 0, max = 10000, setMinMaxFilter }) => {
-  const [sliderValueMin, setSliderValueMin] = useState(min);
-  const [sliderValueMax, setSliderValueMax] = useState(max);
-  const [selectedOption, setSelectedOption] = useState("All Price");
+const PriceRange = ({ min = 0, max = 10000, setMinMaxFilter, valueMinNow, valueMaxNow }) => {
+  const [sliderValueMin, setSliderValueMin] = useState(null);
+  const [sliderValueMax, setSliderValueMax] = useState(null);
+  const [selectedOption, setSelectedOption] = useState(null);
 
   const handleSliderChange = ([newMin, newMax]) => {
     setSliderValueMin(newMin);
@@ -125,7 +125,7 @@ const PriceRange = ({ min = 0, max = 10000, setMinMaxFilter }) => {
         range
         min={min}
         max={max}
-        value={[sliderValueMin, sliderValueMax]}
+        value={[valueMinNow, valueMaxNow]}
         onChange={handleSliderChange}
       />
       {/* Input price */}

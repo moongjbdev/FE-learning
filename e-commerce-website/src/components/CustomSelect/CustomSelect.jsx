@@ -7,12 +7,13 @@ const CustomSelect = ({ options, value, onChange }) => {
   const handleSelect = (option) => {
     onChange(option);
     setIsOpen(false);
+    console.log(option)
   };
   return (
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="mt-1 p-2 border border-[#E4E7E9] rounded-md w-full text-left flex justify-between items-center"
+        className="p-3 gap-2 border border-[#E4E7E9] rounded-md w-full text-left flex justify-between items-center"
       >
         <span className="text-[#475156] text-sm font-normal">{value || 'Select an option'}</span>
         <span className="transform transition-transform duration-200" style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>

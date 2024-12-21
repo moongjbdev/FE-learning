@@ -93,11 +93,6 @@ const QuickViewModal = ({ isOpen, onClose }) => {
     }));
   };
 
-  useEffect(() => {
-    console.log("checked", selectedFilter)
-  }, [selectedFilter])
-
-
   //Xử lý ảnh
   const [selectedImage, setSelectedImage] = useState(product.mainImage);
   //Xử lý click ra ngoài
