@@ -3,11 +3,11 @@ import Vector from "../../assets/CheckBox/Vector.svg"
 const CheckBox = ({ value, name, checked, onChange }) => {
   return (
     <div className="flex items-center">
-      <label className="flex items-center cursor-pointer gap-2" htmlFor={value}>
+      <label className="flex items-center cursor-pointer gap-2" htmlFor={value + "value"}>
         <input
           type="checkbox"
           name={name}
-          id={value}
+          id={value+ "value"}
           value={value}
           className="peer hidden"
           checked={checked}
