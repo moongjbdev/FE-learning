@@ -43,6 +43,7 @@ const QuickViewModal = ({ isOpen, onClose }) => {
     }
   };
 
+  //Data fake
   const product = {
     id: 1,
     name: '2020 Apple MacBook Pro with Apple M1 Chip (13-inch, 8GB RAM, 256GB SSD Storage) - Space Gray',

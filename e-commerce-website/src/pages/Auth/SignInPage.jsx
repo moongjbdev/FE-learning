@@ -6,6 +6,10 @@ import Apple from '../../assets/SignInModal/Apple.svg';
 import Google from '../../assets/SignInModal/Google.svg';
 
 const SignInPage = () => {
+
+  //Nên dùng 1 sate kiểu { } để hứng hết, dùng name của input để phân biệt
+
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isShowPassword, setIsShowPassword] = useState(false)
